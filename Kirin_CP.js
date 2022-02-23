@@ -19,16 +19,18 @@
         }
     }
     function VideoEnd(ele){
-        ele = document.querySelector(ele);
-        if(ele!=null){
-            ele.currentTime=ele.duration-1;
-            ele.play();
-        }
+        setTimeout(()=>{
+            ele = document.querySelector(ele);
+            if(ele!=null){
+                ele.playbackRate=15;
+                ele.play();
+            }    
+        },2000);            
     }
 
     setTimeout(() => {
-        Press("div[class='login_button login_button_ln'] a",3);
+        Press("div[class='login_button login_button_ln'] a",7);
         VideoEnd("video[id='entry_movie']");
-        Press("a[id='em_button']",2);
+        Press("a[id='em_button']",5);
     }, 100);
 })();
