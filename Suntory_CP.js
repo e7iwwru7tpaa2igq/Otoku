@@ -10,4 +10,19 @@
 // ==/UserScript==
 
 (function() {
-function _0x3775(){var _0x396d5e=['3725025dSEbAe','24196XWgLEd','label[for=\x27consent\x27]','5093GEUVnX','3YvYRnH','checked','53FOvafj','input[name=\x27prize_grp_id2\x27]','671344WeVNZE','9630cQnKSr','12200679BoeBOh','354156MHaakv','91wSXwlA','487548BZJynT','6dgVlfh','a[id=\x27sns_post\x27]','7SsOLky','div[class=\x27entry\x27]\x20a'];_0x3775=function(){return _0x396d5e;};return _0x3775();}var _0x37c364=_0x1e9b;(function(_0xd87574,_0x4eab63){var _0x20a0cd=_0x1e9b,_0x2e9ba8=_0xd87574();while(!![]){try{var _0x496c09=-parseInt(_0x20a0cd(0x1c6))/0x1*(parseInt(_0x20a0cd(0x1c1))/0x2)+parseInt(_0x20a0cd(0x1c4))/0x3*(parseInt(_0x20a0cd(0x1cb))/0x4)+parseInt(_0x20a0cd(0x1c0))/0x5*(-parseInt(_0x20a0cd(0x1ce))/0x6)+-parseInt(_0x20a0cd(0x1be))/0x7*(parseInt(_0x20a0cd(0x1c8))/0x8)+parseInt(_0x20a0cd(0x1ca))/0x9+parseInt(_0x20a0cd(0x1c9))/0xa*(parseInt(_0x20a0cd(0x1c3))/0xb)+parseInt(_0x20a0cd(0x1cd))/0xc*(parseInt(_0x20a0cd(0x1cc))/0xd);if(_0x496c09===_0x4eab63)break;else _0x2e9ba8['push'](_0x2e9ba8['shift']());}catch(_0x5b054a){_0x2e9ba8['push'](_0x2e9ba8['shift']());}}}(_0x3775,0xabf45));function _0x1e9b(_0x5a078d,_0x1b9922){var _0x37753d=_0x3775();return _0x1e9b=function(_0x1e9bad,_0x1f04ee){_0x1e9bad=_0x1e9bad-0x1bd;var _0x496592=_0x37753d[_0x1e9bad];return _0x496592;},_0x1e9b(_0x5a078d,_0x1b9922);}function Press(_0x5185b0,_0x4f997b=0x1){_0x5185b0=document['querySelector'](_0x5185b0),_0x5185b0!=null&&setTimeout(()=>{_0x5185b0['click']();},parseInt(_0x4f997b)*0x3e8);}Press(_0x37c364(0x1c2),0x0),Press('label[for=\x27robot\x27]',0x0),Press(_0x37c364(0x1bf),0xf),document['querySelector'](_0x37c364(0x1c7))[_0x37c364(0x1c5)]=!![],Press(_0x37c364(0x1bd),0x0);})();
+    function Press(ele,sec=1){
+        ele = document.querySelector(ele);
+        if(ele!=null){
+            setTimeout(() => {
+                ele.click();
+            }, parseInt(sec)*1000);
+        }
+    }
+
+    Press("label[for='consent']",0);
+    Press("label[for='robot']",0);
+    //Press("div[class='inner'] a",0);
+    Press("div[class='entry'] a",15);
+    document.querySelector("input[name='prize_grp_id2']").checked=true;
+    Press("a[id='sns_post']",0)
+})();
