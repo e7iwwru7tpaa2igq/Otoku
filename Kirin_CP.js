@@ -11,23 +11,24 @@
 
 (function() {
     function Press(ele,sec=1){
-        ele = document.querySelector(ele);
+        const ele = document.querySelector(ele);
+
         if(ele!=null){
             setTimeout(() => {
                 ele.click();
             }, parseInt(sec)*1000);
         }
     }
-    function ChangeClass(ele,newcn,opt=1){
-        ele = document.querySelector(ele);
-        if(ele!=null){
-            if(opt===1){
-                ele.className=newcn;
-            }else ele.className+=newcn;
+    function VideoEnd(ele){
+        const obj = document.querySelector(ele);
+
+        if(obj!=null){
+            obj.currentTime=ele.duration-0.01;
+            obj.play();
         }
     }
 
-    Press("div[class='login_button login_button_ln'] a",2);
-    ChangeClass("a[id='em_button']","");
-    Press("a[id='em_button']",0);
+    Press("div[class='login_button login_button_ln'] a",3);
+    VideoEnd("video[id='entry_movie']");
+    Press("a[id='em_button']",1);
 })();
