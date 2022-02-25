@@ -27,7 +27,7 @@
     Press("div[class='entry'] a",15);
     ele = document.querySelector("input[name='prize_grp_id2']");
     if(ele!=null)ele.checked=true;
+    Press("a[id='sns_post']",0)
     ele = document.querySelectorAll("ul[id='lot-answer-action'] button").item(Math.floor(Math.random()*3));
     if(ele!=null)ele.click();
-    Press("a[id='sns_post']",0)
 })();
