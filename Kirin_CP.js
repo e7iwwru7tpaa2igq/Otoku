@@ -11,11 +11,11 @@
 
 (function() {
     function Press(ele,sec=1){
-        const obj = document.querySelector(ele);
+        const ele = document.querySelector(ele);
 
-        if(obj!=null){
+        if(ele!=null){
             setTimeout(() => {
-                obj.click();
+                ele.click();
             }, parseInt(sec)*1000);
         }
     }
@@ -29,11 +29,11 @@
     }
 
     const mov = document.querySelector("video[id='entry_movie']")
-    if(mov!=null){
-        Press("div[class='login_button login_button_ln'] a",0);
-    }else{
+    if(mov===null){
         mov.currentTime=mov.duration-0.01;
         mov.play();
         Press("a[id='em_button']",1);
+    }else{
+        Press("div[class='login_button login_button_ln'] a",0);
     }
 })();
