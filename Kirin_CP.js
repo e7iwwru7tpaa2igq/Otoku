@@ -11,11 +11,11 @@
 
 (function() {
     function Press(ele,sec=1){
-        const ele = document.querySelector(ele);
+        const obj = document.querySelector(ele);
 
-        if(ele!=null){
+        if(obj!=null){
             setTimeout(() => {
-                ele.click();
+                obj.click();
             }, parseInt(sec)*1000);
         }
     }
