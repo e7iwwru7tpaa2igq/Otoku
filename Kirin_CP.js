@@ -30,10 +30,10 @@
 
     const mov = document.querySelector("video[id='entry_movie']")
     if(mov===null){
+        Press("div[class='login_button login_button_ln'] a",0);
+    }else{
         mov.currentTime=mov.duration-0.01;
         mov.play();
         Press("a[id='em_button']",1);
-    }else{
-        Press("div[class='login_button login_button_ln'] a",0);
     }
 })();
