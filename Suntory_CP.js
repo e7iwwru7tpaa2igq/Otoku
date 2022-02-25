@@ -26,6 +26,6 @@
     //Press("div[class='inner'] a",0);
     Press("input[name='prize_grp_id2']",0);
     Press("ul[id='lot-answer-action'] button",0);
-    Press("a[id='sns_post']",0)
+    Press("a[id='sns_post']",0);
     Press("div[class='entry'] a",15);
 })();
