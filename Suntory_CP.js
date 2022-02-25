@@ -24,10 +24,8 @@
     Press("label[for='consent']",0);
     Press("label[for='robot']",0);
     //Press("div[class='inner'] a",0);
-    Press("div[class='entry'] a",15);
-    ele = document.querySelector("input[name='prize_grp_id2']");
-    if(ele!=null)ele.checked=true;
+    Press("input[name='prize_grp_id2']",0);
+    Press("ul[id='lot-answer-action'] button",0);
     Press("a[id='sns_post']",0)
-    ele = document.querySelectorAll("ul[id='lot-answer-action'] button").item(Math.floor(Math.random()*3));
-    if(ele!=null)ele.click();
+    Press("div[class='entry'] a",15);
 })();
