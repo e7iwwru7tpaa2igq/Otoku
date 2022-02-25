@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  try to take over the world!
 // @author       You
-// @match        https://webcp.suntory.co.jp/apc/sscp/*
+// @match        https://webcp.suntory.co.jp/*
 // @icon         https://www.google.com/s2/favicons?domain=suntory.co.jp
 // @grant        none
 // ==/UserScript==
