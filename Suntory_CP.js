@@ -28,6 +28,6 @@
     Press("ul[id='lot-answer-action'] li span",0);
     Press("a[id='sns_post']",0);
     const res = document.querySelector("p[id='lot-result-copy'] img");
-    alert(res.alt);
+    if(~res===null)alert(res.alt);
     Press("div[class='entry'] a",15);
 })();
