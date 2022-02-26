@@ -27,7 +27,9 @@
     Press("input[name='prize_grp_id2']",0);
     Press("ul[id='lot-answer-action'] li span",0);
     Press("a[id='sns_post']",0);
-    const res = document.querySelector("p[id='lot-result-copy'] img");
-    if(~res===null)alert(res.alt);
+    setTimeout(()=>{
+        const res = document.querySelector("p[id='lot-result-copy'] img");
+        if(~res===null)alert(res.alt);
+    },1000);
     Press("div[class='entry'] a",15);
 })();
