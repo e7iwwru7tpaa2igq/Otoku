@@ -10,7 +10,7 @@
 // ==/UserScript==
 
 (function() {
-    function Press(ele,sec=1){
+    function Press(ele,sec=0){
         const obj = document.querySelector(ele);
 
         if(obj!=null){
