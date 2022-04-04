@@ -32,7 +32,7 @@
 
     const mov = document.querySelector("video[id='entry_movie']")
     if(mov===null){
-        Press("div[class='login_button login_button_ln'] a",0);
+        Press("div[class='login_button login_button_ln'] a");
     }else{
 /*
         mov.currentTime=mov.duration-0.01;
