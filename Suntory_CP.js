@@ -10,7 +10,7 @@
 // ==/UserScript==
 
 (function() {
-    function Press(ele,sec=1){
+    function Press(ele,sec=0){
         ele = document.querySelector(ele);
         if(ele!=null){
             setTimeout(() => {
@@ -21,10 +21,10 @@
 
     let ele;
     
-    Press("label[for='consent']",0);
-    Press("label[for='robot']",0);
-    //Press("div[class='inner'] a",0);
-    Press("input[name='prize_grp_id2']",0);
-    Press("a[id='sns_post']",0);
+    Press("label[for='consent']");
+    Press("label[for='robot']");
+    //Press("div[class='inner'] a");
+    Press("input[name='prize_grp_id2']");
+    Press("a[id='sns_post']");
     Press("div[class='entry'] a",15);
 })();
