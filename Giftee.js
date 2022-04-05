@@ -5,7 +5,7 @@
 // @description  try to take over the world!
 // @author       You
 // @match        https://gcp.giftee.biz/*
-// @icon         https://www.google.com/s2/favicons?sz=64&domain=gcp.giftee.biz
+// @icon         https://www.google.com/s2/favicons&domain=gcp.giftee.biz
 // @grant        none
 // ==/UserScript==
 
