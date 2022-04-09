@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Auto Giftee
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.11
 // @description  try to take over the world!
 // @author       You
 // @match        https://gcp.giftee.biz/*
@@ -10,22 +10,31 @@
 // ==/UserScript==
 
 (function() {
-    function ObjXPath(str){
-        const obj = document.evaluate(str,document,null,XPathResult.ORDERED_NODE_SNAPSHOT_TYPE,null);
+    function Press(str,sec=0){
+        try{
+            setTimeout(() => {
+                document.evaluate(str,document,null,XPathResult.ORDERED_NODE_SNAPSHOT_TYPE,null).snapshotItem(0).click();
+            }, parseInt(sec)*1000);
+        }catch (e){};
+    }
+    function AttrChange(str,type=1){
+        try{
+            const obj = document.evaluate(str,document,null,XPathResult.ORDERED_NODE_SNAPSHOT_TYPE,null).snapshotItem(0);
 
-        if(!obj===null){
-            return obj.snapshotItem(0);
-        }else return null;
+            switch(type){
+                case 1: //Enable Node
+                    obj.disabled=false;
+                    break;
+
+                default:
+                    break;
+            }
+        }catch (e){};
     };
 
-    ObjXPath("//a[.//span[contains(text(),'応募する')]]").click();
-/*
-    function Press(ele,sec=0){
-        if(!ele===null){
-            setTimeout(() => {
-                ele.click();
-            }, parseInt(sec)*1000);
-        }
-    }
-*/
+    Press("//a[.//span[contains(text(),'応募する')]]");
+    AttrChange("//input[contains(@value,'次へ')]",1); //Enable Node
+    Press("//input[contains(@value,'次へ')]");
+    Press("//a[contains(text(),'結果をみる')]");
+    Press("//a[.//[contains(text(),'ギフトを表示')]]");
 })();
