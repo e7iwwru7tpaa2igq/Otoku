@@ -36,5 +36,5 @@
     AttrChange("//input[contains(@value,'次へ')]",1); //Enable Node
     Press("//input[contains(@value,'次へ')]");
     Press("//a[contains(text(),'結果をみる')]");
-    Press("//a[.//[contains(text(),'ギフトを表示')]]");
+    Press("//a[.//span[contains(text(),'ギフトを表示')]]");
 })();
